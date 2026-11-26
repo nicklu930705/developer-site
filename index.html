@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Nick Lu (LU TSE-HSIEN) ｜ 獨立 App 開發者作品集與隱私政策中心</title>
+  <meta name="description" content="Nick Lu (LU TSE-HSIEN) 的個人開發者網站。專注於打造重視隱私、純粹實用的 iOS 原生與行動應用，包含 SubTrack 訂閱費管家、考試計劃 AI 等產品介紹、隱私權政策與支援服務。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 頂部導覽列 -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="site-brand">
+        <span>LU TSE-HSIEN</span>
+        <span class="brand-badge">Dev</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#apps">作品集</a></li>
+          <li><a href="privacy/index.html">隱私權政策</a></li>
+          <li><a href="support/index.html">技術支援</a></li>
+          <li><a href="#about">關於</a></li>
+          <li>
+            <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="切換網站外觀主題">
+              <span aria-hidden="true">🌓</span> <span>外觀</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 主內容區 -->
+  <main>
+    <!-- Hero 區塊 -->
+    <section class="hero">
+      <span class="hero-subtitle">Independent iOS App Developer</span>
+      <h1>
+        專注於極致體驗與<br>
+        <span class="hero-gradient-text">個人隱私保護的原生應用</span>
+      </h1>
+      <p class="hero-desc">
+        我是 LU TSE-HSIEN（Nick Lu）。致力於打造乾淨無擾、無惡意追蹤、本機優先的實用工具，讓軟體回到最純粹好用的模樣。
+      </p>
+      <div class="hero-actions">
+        <a href="#apps" class="btn btn-primary">探索發布的 App</a>
+        <a href="privacy/index.html" class="btn btn-secondary">各 App 隱私權政策</a>
+      </div>
+    </section>
+
+    <!-- App 展示區塊 -->
+    <section id="apps">
+      <div class="section-header">
+        <h2>精選作品 (Featured Apps)</h2>
+        <p>每一款 App 都堅持透明的資料處理原則與流暢的原生交互體驗。</p>
+      </div>
+
+      <div class="apps-grid">
+        
+        <!-- App 1: SubTrack -->
+        <article class="app-card">
+          <div class="app-card-header">
+            <img src="assets/subtrack-icon.png" alt="SubTrack App Icon" class="app-icon">
+            <div class="app-title-group">
+              <h3>SubTrack 訂閱費管家</h3>
+              <span class="app-tagline">把每一筆訂閱，都花得值得</span>
+              <div class="app-badge-row">
+                <span class="tag-badge">iOS 17+ 原生</span>
+                <span class="tag-badge">SwiftData</span>
+                <span class="tag-badge">本機隱私</span>
+                <span class="tag-badge">無廣告</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-preview-frame">
+            <img src="assets/subtrack-preview.png" alt="SubTrack 介面預覽" loading="lazy">
+          </div>
+
+          <p class="app-desc">
+            專為需要掌握數位訂閱、固定支出與續約日期的使用者打造。內建 43+ 主流服務快速選擇，支援週、月、季、年等值換算、未來日曆扣款預覽與扣款前通知提醒。所有資料皆留在您的裝置本機，無自營伺服器、不收集個人隱私。
+          </p>
+
+          <ul class="feature-list">
+            <li>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+              完全本機 SwiftData 儲存，零追蹤、無第三方分析代碼
+            </li>
+            <li>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+              試用期到期通知與扣款前 1/3/7 天智慧提醒
+            </li>
+            <li>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+              整合 Apple StoreKit 購買驗證，透明公開方案
+            </li>
+          </ul>
+
+          <div class="app-card-actions">
+            <div class="app-links-group">
+              <a href="subtrack/index.html">產品介紹</a>
+              <a href="subtrack/privacy.html">隱私權政策</a>
+              <a href="subtrack/support.html">技術支援</a>
+            </div>
+            <a href="subtrack/index.html" class="btn btn-secondary btn-sm">了解詳情</a>
+          </div>
+        </article>
+
+        <!-- App 2: 考試計劃 AI -->
+        <article class="app-card">
+          <div class="app-card-header">
+            <img src="assets/examplan-icon.png" alt="考試計劃 AI App Icon" class="app-icon">
+            <div class="app-title-group">
+              <h3>考試計劃 AI</h3>
+              <span class="app-tagline">智慧規劃備考進度，高效衝刺每一次測驗</span>
+              <div class="app-badge-row">
+                <span class="tag-badge">AI 智慧排程</span>
+                <span class="tag-badge">備考進度</span>
+                <span class="tag-badge">專注計時器</span>
+                <span class="tag-badge">安全加密</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-preview-frame">
+            <img src="assets/examplan-preview.png" alt="考試計劃 AI 介面預覽" loading="lazy">
+          </div>
+
+          <p class="app-desc">
+            專為國考、升學考與專業證照考生打造的備考管理助手。智慧分解考試科目與章節、生成量身訂做的每日讀書任務，搭配動態進度追蹤與專注計時器，助您告別備考焦慮。
+          </p>
+
+          <ul class="feature-list">
+            <li>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+              備考資料本機儲存，僅在要求 AI 建議時經由加密通道傳輸上下文
+            </li>
+            <li>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+              絕不收集個人身分證字號、聯絡人、相簿或精確定位等敏感個資
+            </li>
+            <li>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+              支援一鍵完整清除所有學習紀錄與裝置快取
+            </li>
+          </ul>
+
+          <div class="app-card-actions">
+            <div class="app-links-group">
+              <a href="examplan/index.html">產品介紹</a>
+              <a href="examplan/privacy.html">隱私權政策</a>
+              <a href="examplan/support.html">技術支援</a>
+            </div>
+            <a href="examplan/index.html" class="btn btn-secondary btn-sm">了解詳情</a>
+          </div>
+        </article>
+
+        <!-- App 3: ShiftPay -->
+        <article class="app-card">
+          <div class="app-card-header">
+            <img src="assets/shiftpay-icon.png" alt="ShiftPay App Icon" class="app-icon">
+            <div class="app-title-group">
+              <h3>ShiftPay｜排班薪資計算</h3>
+              <span class="app-tagline">打工排班記工時・透明加班費核對</span>
+              <div class="app-badge-row">
+                <span class="tag-badge">iOS 17+ 原生</span>
+                <span class="tag-badge">SwiftData</span>
+                <span class="tag-badge">本機隱私</span>
+                <span class="tag-badge">無廣告</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-preview-frame">
+            <img src="assets/shiftpay-preview.png" alt="ShiftPay 介面預覽" loading="lazy">
+          </div>
+
+          <p class="app-desc">
+            專為台灣計時打工族、兼職與輪班工作者打造的個人排班、工時與透明薪資對帳助手。三步快速記班、預定與實際工時分開、保留 2026 至 2027 調薪規則版本，發薪日一秒抓出實領差額。
+          </p>
+
+          <ul class="feature-list">
+            <li>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+              每筆班次展開逐段透明加班費算式，完整呈現規則版本與進位方式
+            </li>
+            <li>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+              領薪對帳支援手動勞健保代扣備忘、結案鎖定與 A4 PDF／CSV 匯出
+            </li>
+            <li>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+              100% Local-First 本機儲存，免登入、無伺服器、零追蹤
+            </li>
+          </ul>
+
+          <div class="app-card-actions">
+            <div class="app-links-group">
+              <a href="shiftpay/index.html">產品介紹</a>
+              <a href="shiftpay/privacy.html">隱私權政策</a>
+              <a href="shiftpay/support.html">技術支援</a>
+            </div>
+            <a href="shiftpay/index.html" class="btn btn-secondary btn-sm">了解詳情</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 關於開發者與聯絡資訊 -->
+    <section id="about" class="about-section">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>關於開發者 (About Developer)</h2>
+          <p>
+            我是 <strong>LU TSE-HSIEN（Nick Lu）</strong>，熱愛 Swift、SwiftUI 與現代行動應用技術的獨立開發者。我深信优秀的軟體應該是「安靜而可靠的夥伴」——在您需要時提供強大易用的功能，在背景時絕不多取一分資料、絕不打擾生活。
+          </p>
+          <p>
+            本網站作為所有作品之官方公開門戶，同時遵循 Apple App Store 與 Google Play 之法規要求，提供各應用之公開隱私權條款與客服支援管道。
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h4>聯絡與支援 (Contact)</h4>
+          <ul class="contact-list">
+            <li>
+              <strong>開發者信箱：</strong><br>
+              <a href="mailto:NickLu930705@gmail.com">NickLu930705@gmail.com</a>
+            </li>
+            <li>
+              <strong>考試計劃 AI 客服：</strong><br>
+              <a href="mailto:examplanai.support@gmail.com">examplanai.support@gmail.com</a>
+            </li>
+            <li>
+              <strong>GitHub 主頁：</strong><br>
+              <a href="https://github.com/nicklu930705" target="_blank" rel="noopener noreferrer">github.com/nicklu930705</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div>
+        <p>© 2026 LU TSE-HSIEN (Nick Lu). All rights reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 4px; color: var(--text-muted);">
+          使用條款依據 <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Apple 標準 EULA</a> 規範。
+        </p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="privacy/index.html">隱私權政策</a></li>
+        <li><a href="support/index.html">支援中心</a></li>
+        <li><a href="https://github.com/nicklu930705" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
