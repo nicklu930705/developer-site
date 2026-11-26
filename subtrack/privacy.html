@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>SubTrack 訂閱費管家 ｜ 隱私權政策 (Privacy Policy)</title>
+  <meta name="description" content="SubTrack 訂閱費管家的官方隱私權政策。說明本應用程式之資料儲存機制（本機 SwiftData）、無追蹤無廣告承諾，以及 Apple StoreKit 交易處理原則。">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="../index.html" class="site-brand">
+        <span>LU TSE-HSIEN</span>
+        <span class="brand-badge">Dev</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#apps">所有 App</a></li>
+          <li><a href="index.html">SubTrack 首頁</a></li>
+          <li><a href="privacy.html" class="active">隱私權政策</a></li>
+          <li><a href="support.html">技術支援</a></li>
+          <li>
+            <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="切換網站外觀主題">
+              <span aria-hidden="true">🌓</span> <span>外觀</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="doc-container">
+      
+      <!-- 麵包屑導覽 -->
+      <nav class="breadcrumb" aria-label="頁面路徑">
+        <a href="../index.html">首頁</a>
+        <span>/</span>
+        <a href="../privacy/index.html">隱私權中心</a>
+        <span>/</span>
+        <span>SubTrack 隱私政策</span>
+      </nav>
+
+      <div class="doc-header">
+        <div class="doc-app-badge">
+          <img src="../assets/subtrack-icon.png" alt="SubTrack Icon" class="doc-app-icon">
+          <strong>SubTrack 訂閱費管家</strong>
+        </div>
+        <h1>隱私權政策 (Privacy Policy)</h1>
+        <div class="doc-meta">
+          <span>最後修訂日期：2026 年 10 月 31 日</span>
+          <span>適用版本：SubTrack 1.0 以上</span>
+          <span>開發者：LU TSE-HSIEN</span>
+        </div>
+      </div>
+
+      <div class="doc-callout">
+        <strong>隱私核心原則：您的財務紀錄 100% 留在您的 iPhone 本機。</strong><br>
+        SubTrack 不設有任何自有伺服器，不建立使用者帳號，不嵌入廣告或行為追蹤 SDK，絕不將您的訂閱消費內容上傳至任何雲端資料庫。
+      </div>
+
+      <article class="doc-content">
+        <h2>1. App 處理與儲存之資料</h2>
+        <p>
+          當您在 SubTrack 中記錄訂閱或固定開銷時，您輸入的資料包含：
+        </p>
+        <ul>
+          <li>訂閱項目名稱、扣款週期（週、月、季、年）、扣款金額、幣別標籤</li>
+          <li>扣款起始日、首次扣款日、試用期截止日期與續約週期錨點</li>
+          <li>自訂或預設分類標籤、付款來源備註（僅作為標籤分類，不輸入也不儲存金融卡號或銀行帳密）</li>
+          <li>停用、暫停、取消續訂或封存之狀態註記</li>
+        </ul>
+        <p>
+          上述資料全部使用 Apple 原生 <strong>SwiftData</strong> 技術加密儲存於您的 iOS 裝置本機沙盒空間中。App 預算目標、外觀深淺色偏好及本地通知開關則保存在系統偏好設定（UserDefaults）中。
+        </p>
+        <p>
+          <strong>【重要保證】</strong>：SubTrack 沒有任何銀行帳戶連線功能、不需註冊或登入帳號、無任何分析追蹤程式碼（Analytics），開發者無法且永遠不會接收、調閱或販售您的任何訂閱清單與金額。
+        </p>
+
+        <h2>2. Apple 購買驗證與本地通知</h2>
+        <h3>2.1 Apple In-App Purchase (StoreKit 2)</h3>
+        <p>
+          當您在 App 內購買或升級為 SubTrack Pro 時，所有的訂單處理、信用卡扣款、帳單開立、續約與退款均由 Apple App Store 官方金流系統直接處理。
+        </p>
+        <p>
+          開發者不接收亦不保留您的信用卡號、帳單地址或 Apple ID 帳號密碼。SubTrack 僅透過 Apple 官方 StoreKit 2 介面接收經 Apple 數位簽署的安全收據，於本機驗證購買狀態以解鎖進階功能。
+        </p>
+
+        <h3>2.2 本地通知 (Local Notifications)</h3>
+        <p>
+          若您啟用了扣款或試用期到期提醒，SubTrack 會利用 iOS 系統的本地排程通知功能（UNUserNotificationCenter）於裝置上建立提醒。該提醒完全在您手機本機排程觸發，不需要任何遠端推播伺服器參與。若您拒絕授予通知權限，僅提醒功能暫停，完全不影響任何訂閱記錄與統計之運作。
+        </p>
+
+        <h2>3. 使用者主動匯出與外部連結</h2>
+        <h3>3.1 CSV 檔案匯出</h3>
+        <p>
+          SubTrack 支援將您的訂閱資料匯出為 CSV 試算表格式。匯出行為完全由您主動觸發，並透過 iOS 系統原生分享面板（Share Sheet）儲存至本機檔案或傳送給您指定的接收者。
+        </p>
+
+        <h3>3.2 官方訂閱管理網址</h3>
+        <p>
+          App 目錄中可能提供主流訂閱服務（如串流平台、軟體服務）之官方帳號管理快速連結。點擊該連結將使用系統瀏覽器開啟該服務的官方網站，其後續所有互動皆受該第三方網站之隱私政策管轄。
+        </p>
+
+        <h2>4. 資料保存、備份與刪除權益</h2>
+        <ul>
+          <li><strong>手動刪除：</strong>您可隨時在 App 內單筆滑動刪除或清空項目。</li>
+          <li><strong>移除 App：</strong>若您將 SubTrack 從 iPhone 上刪除，iOS 系統會依其安全機制一併清除沙盒內所有儲存之訂閱資料。</li>
+          <li><strong>系統備份：</strong>您的資料會隨同 iOS 系統的整機備份（如 iCloud 整機備份或電腦本機 iTunes/Finder 備份）一同保存，此備份加密狀態受您的 Apple ID 與個人 iCloud 隱私條款保護。</li>
+        </ul>
+
+        <h2>5. 支援網站之伺服器記錄說明</h2>
+        <p>
+          本支援網站由 GitHub Pages 託管，頁面純為靜態 HTML，無任何第三方廣告或訪客追蹤 Cookie。依據 GitHub 官方政策，GitHub Pages 伺服器會在安全與維運合規範圍內暫時記錄連線請求的 IP 位址，詳情請參考 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noopener noreferrer">GitHub Pages 說明</a> 與 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub 隱私權聲明</a>。
+        </p>
+
+        <h2>6. 政策更新與開發者聯絡管道</h2>
+        <p>
+          本隱私權政策若有任何文字調整或隨 iOS 系統法規修正，均會即時公告於本公開網頁並更新上方日期。若您對 SubTrack 的隱私政策有任何疑問或回饋，歡迎隨時透過下方電子信箱直接與開發者聯繫：
+        </p>
+        <p>
+          <strong>開發者兼資料管理負責人：</strong> LU TSE-HSIEN<br>
+          <strong>聯絡電子郵件：</strong> <a href="mailto:NickLu930705@gmail.com">NickLu930705@gmail.com</a>
+        </p>
+      </article>
+
+      <div class="doc-nav-card">
+        <div>
+          <h4>需要協助或遇到問題？</h4>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px;">查看常見問題解答，或聯繫開發者取得技術支援。</p>
+        </div>
+        <a href="support.html" class="btn btn-primary btn-sm">前往技術支援專頁</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div>
+        <p>© 2026 LU TSE-HSIEN. All rights reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 4px; color: var(--text-muted);">
+          使用條款：<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Apple 標準 EULA</a>
+        </p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="../index.html">作品集首頁</a></li>
+        <li><a href="index.html">SubTrack 介紹</a></li>
+        <li><a href="privacy.html">隱私政策</a></li>
+        <li><a href="support.html">技術支援</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
