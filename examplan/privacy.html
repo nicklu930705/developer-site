@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>考試計劃 AI ｜ 隱私權政策 (Privacy Policy)</title>
+  <meta name="description" content="考試計劃 AI（ExamPlan AI）官方隱私權政策。說明本機資料保存原則、使用 AI 建議時之加密傳輸欄位、第三方服務（OpenAI API、Vercel、Upstash Redis）之資安規範與資料清除管道。">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="../index.html" class="site-brand">
+        <span>LU TSE-HSIEN</span>
+        <span class="brand-badge">Dev</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#apps">所有 App</a></li>
+          <li><a href="index.html">考試計劃 AI 首頁</a></li>
+          <li><a href="privacy.html" class="active">隱私權政策</a></li>
+          <li><a href="support.html">技術支援</a></li>
+          <li>
+            <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="切換網站外觀主題">
+              <span aria-hidden="true">🌓</span> <span>外觀</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="doc-container">
+      
+      <nav class="breadcrumb" aria-label="頁面路徑">
+        <a href="../index.html">首頁</a>
+        <span>/</span>
+        <a href="../privacy/index.html">隱私權中心</a>
+        <span>/</span>
+        <span>考試計劃 AI 隱私政策</span>
+      </nav>
+
+      <div class="doc-header">
+        <div class="doc-app-badge">
+          <img src="../assets/examplan-icon.png" alt="考試計劃 AI Icon" class="doc-app-icon">
+          <strong>考試計劃 AI (ExamPlan AI)</strong>
+        </div>
+        <h1>隱私權政策 (Privacy Policy)</h1>
+        <div class="doc-meta">
+          <span>最後更新日期：2026 年 10 月</span>
+          <span>客服信箱：examplanai.support@gmail.com</span>
+          <span>開發者：LU TSE-HSIEN</span>
+        </div>
+      </div>
+
+      <div class="doc-callout">
+        <strong>隱私摘要承諾：</strong><br>
+        「考試計畫 AI」專注於協助您高效備考。所有備考細節與計時紀錄預設保存在您的手機本機；僅在您主動點擊生成「AI 建議」時，透過 HTTPS 加密傳輸必要備考進度上下文進行運算，絕不收集真實姓名、身分證字號、通訊錄、相簿或精確定位等敏感個資。
+      </div>
+
+      <article class="doc-content">
+        <h2>1. 本機資料保存與範圍</h2>
+        <p>
+          您自行輸入的考試名稱、考試目標日期、各科目名稱與熟悉度評估、章節劃分、每日預計研讀時間、讀書強度、每週休息日、任務勾選狀態以及專注計時器紀錄，均直接加密保存在您的裝置本機儲存空間（AsyncStorage）中。
+        </p>
+        <p>
+          在您未主動使用「AI 讀書建議」功能前，上述所有備考資訊僅於您的裝置內部進行離線運算與呈現，不會自動同步至任何外部伺服器。
+        </p>
+
+        <h2>2. 使用「AI 讀書建議」時傳送之資料</h2>
+        <p>
+          當您在 App 內主動點擊「AI 讀書建議」時，為生成貼合您備考進度的具體建言，App 會將當前必要的上下文資訊經由 HTTPS 加密傳送至本服務部署於 Vercel 的專用後端安全代理，並轉發至第三方大型語言模型供應商（OpenAI API）進行分析與建議生成。
+        </p>
+        <p><strong>實際傳輸之欄位僅限：</strong></p>
+        <ul>
+          <li>考試名稱與預計考試日期</li>
+          <li>每日可用研讀時間與設定之讀書強度</li>
+          <li>科目名稱、熟悉度評估、章節總數與已完成章節數</li>
+          <li>近期讀書任務完成率與落後任務統計數據</li>
+        </ul>
+        <p>
+          <strong>【不收集之敏感資訊】：</strong>本服務絕不存取、收集或傳輸您的真實姓名、身分證字號、電話號碼、聯絡人通訊錄、照片相簿、精確 GPS 定位或任何金融付款帳號資訊。
+        </p>
+
+        <h2>3. 裝置識別碼與用量防護</h2>
+        <p>
+          為提供每位使用者每日合理的使用額度（例如免費版每日 AI 讀書建議配額），並防止伺服器遭受異常頻繁呼叫或惡意阻斷服務攻擊，App 於首次啟動時會在您的裝置本機產生一組隨機亂數之匿名裝置識別碼（<code>X-Client-Device-Id</code>）。
+        </p>
+        <p>
+          此識別碼連同發起請求時的網路 IP 位址，僅用於伺服器端 Redis 資料庫計算當日呼叫次數、執行每分鐘頻率限制（Rate Limit）以及全域成本預算安全鎖定。該識別碼未與任何外部個人身分或帳號資料庫進行關聯。
+        </p>
+
+        <h2>4. 第三方服務、伺服器日誌與資料保留機制</h2>
+        <p>本服務在提供雲端 AI 建議時，使用以下受信任之第三方雲端基礎設施：</p>
+        <ul>
+          <li>
+            <strong>Vercel（雲端運算代管）：</strong>負責執行無伺服器後端代理函式。在網路連線傳輸過程中，系統可能會記錄暫態標準伺服器存取紀錄（如連線 IP、User-Agent、請求時間與 HTTP 回應碼），以維護連線安全與診斷伺服器狀態。此類存取日誌僅依 Vercel 平台預設之有限週期短暫保存，本服務未額外設置永久日誌資料倉儲。
+          </li>
+          <li>
+            <strong>Upstash Redis（用量控制資料庫）：</strong>負責儲存每日呼叫次數計數器、頻率限制與並行安全鎖。所有鍵值均依程式碼設定自動過期機制（TTL）：防並行鎖與每分鐘頻率限制鍵於約 30～65 秒內自動釋放刪除；使用者每日額度與日預算統計鍵於 48 小時內由 Redis 記憶體中自動過期清除；每月預算統計鍵於約 65 天後自動失效。伺服端資料庫不永久保留您的個人備考歷史紀錄。
+          </li>
+          <li>
+            <strong>OpenAI API（AI 模型推論）：</strong>負責處理備考上下文並生成繁體中文研讀策略。依據 OpenAI 官方商用 API 資料處理規範，透過商用 API 傳輸之資料預設不應用於訓練其公共基礎模型；OpenAI 官方政策說明其系統基於防範濫用等安全需求可能會暫態保存資料（通常為 30 天內，具體保留時限隨 OpenAI 官方規範更新為準）。
+          </li>
+        </ul>
+
+        <h2>5. 資料刪除與使用者權利</h2>
+        <p>您對自己的資料擁有完全的控制權：</p>
+        <ul>
+          <li><strong>清除本機資料：</strong>您可隨時至 App「設定 → 資料 → 清除所有資料」，一鍵清空手機上保存的所有考試、任務、進度與計時歷史紀錄。</li>
+          <li><strong>移除 App：</strong>若您從裝置解除安裝（刪除）本 App，系統將一併清除該 App 沙盒內的所有本機儲存資料。</li>
+          <li><strong>伺服端查詢或清除請求：</strong>若您對本服務之伺服端存取紀錄或用量資料有任何疑問，或欲請求清除特定裝置識別碼之紀錄，可隨時透過下方聯絡方式與我們聯繫。</li>
+        </ul>
+
+        <h2>6. 開發者聯絡方式與政策更新</h2>
+        <p>
+          本隱私權政策將隨著服務功能演進與法規要求適時修訂。若您對本政策或個人資料處理有任何疑問、建議或需求，請透過以下管道聯絡：
+        </p>
+        <p>
+          <strong>開發者兼負責人：</strong> LU TSE-HSIEN<br>
+          <strong>客服與技術支援信箱：</strong> <a href="mailto:examplanai.support@gmail.com">examplanai.support@gmail.com</a><br>
+          <strong>開發者信箱：</strong> <a href="mailto:NickLu930705@gmail.com">NickLu930705@gmail.com</a>
+        </p>
+      </article>
+
+      <div class="doc-nav-card">
+        <div>
+          <h4>需要使用指引或反饋？</h4>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px;">造訪技術支援頁面，查看常見問題解答或直接聯絡團隊。</p>
+        </div>
+        <a href="support.html" class="btn btn-primary btn-sm">前往技術支援專頁</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div>
+        <p>© 2026 LU TSE-HSIEN. All rights reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 4px; color: var(--text-muted);">
+          使用條款：<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Apple 標準 EULA</a>
+        </p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="../index.html">作品集首頁</a></li>
+        <li><a href="index.html">考試計劃 AI 介紹</a></li>
+        <li><a href="privacy.html">隱私政策</a></li>
+        <li><a href="support.html">技術支援</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
