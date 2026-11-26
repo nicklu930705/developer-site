@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>ShiftPay｜排班薪資計算 — 隱私權政策 (Privacy Policy)</title>
+  <meta name="description" content="ShiftPay 排班薪資計算官方隱私權政策。完整說明本機 SwiftData 儲存、不收集個人資料（Data Not Collected）、零廣告與零追蹤 SDK 承諾，以及 Apple StoreKit 2 交易處理原則。">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="../index.html" class="site-brand">
+        <span>LU TSE-HSIEN</span>
+        <span class="brand-badge">Dev</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#apps">所有 App</a></li>
+          <li><a href="index.html">ShiftPay 首頁</a></li>
+          <li><a href="privacy.html" class="active">隱私權政策</a></li>
+          <li><a href="support.html">技術支援</a></li>
+          <li>
+            <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="切換網站外觀主題">
+              <span aria-hidden="true">🌓</span> <span>外觀</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="doc-container">
+
+      <nav class="breadcrumb" aria-label="頁面路徑">
+        <a href="../index.html">首頁</a>
+        <span>/</span>
+        <a href="../privacy/index.html">隱私權中心</a>
+        <span>/</span>
+        <span>ShiftPay 隱私政策</span>
+      </nav>
+
+      <div class="doc-header">
+        <div class="doc-app-badge">
+          <img src="../assets/shiftpay-icon.png" alt="ShiftPay Icon" class="doc-app-icon">
+          <strong>ShiftPay｜排班薪資計算</strong>
+        </div>
+        <h1>隱私權政策 (Privacy Policy)</h1>
+        <div class="doc-meta">
+          <span>最後修訂日期：2026 年 11 月 26 日</span>
+          <span>適用版本：ShiftPay 1.0 以上（iOS 17+）</span>
+          <span>開發者：LU TSE-HSIEN</span>
+        </div>
+      </div>
+
+      <div class="doc-callout">
+        <strong>核心隱私承諾（Data Not Collected）：您的班表與薪資紀錄 100% 僅留在您的 iPhone 本機。</strong><br>
+        ShiftPay 採完全 Local-First 架構，不設有任何自有後端伺服器，不要求註冊或登入帳號，不內嵌第三方廣告或行為追蹤 SDK，亦不請求定位、相機、相簿、聯絡人或行事曆等敏感權限。
+      </div>
+
+      <article class="doc-content">
+        <h2>1. App 處理與儲存之本機資料</h2>
+        <p>當您使用 ShiftPay 記錄排班與進行領薪對帳時，您輸入的所有內容皆僅儲存在您 iPhone 裝置內的 iOS 沙盒 <strong>SwiftData</strong> 本機資料庫中，包含：</p>
+        <ul>
+          <li>工作名稱、結算週期起日、發薪日與自訂班別模板</li>
+          <li>歷年時薪／月薪金額、生效日期、加班倍率精度與進位規則版本</li>
+          <li>預定與實際上下班時間、無薪休息分鐘數、日期性質與個人備註</li>
+          <li>領薪對帳之實領入帳金額、手動加項／代扣備忘、對帳備註與結案鎖定狀態</li>
+        </ul>
+        <p>
+          <strong>【重要保證】</strong>：ShiftPay 沒有遠端資料庫同步、無第三方分析或廣告追蹤程式碼，開發者無法且永遠不會接收、查閱或販售您的任何工作名稱、工時或薪資紀錄。
+        </p>
+
+        <h2>2. Apple 內購與訂閱驗證（StoreKit 2）</h2>
+        <p>
+          當您在 App 內選購 ShiftPay Pro（月訂閱／年訂閱）、Lifetime 終身買斷或點擊「恢復購買」時，所有金流結帳、帳單、續訂與退款皆由 <strong>Apple App Store</strong> 官方系統直接處理。
+        </p>
+        <p>
+          開發者不會收到亦不會儲存您的信用卡號、帳單地址或 Apple 帳號密碼。ShiftPay 僅透過 Apple 原生 StoreKit 2 框架於本機驗證 Apple 數位簽署之交易憑證以判斷功能權限。
+        </p>
+
+        <h2>3. 使用者主動匯出與本機備份</h2>
+        <ul>
+          <li><strong>A4 PDF 對帳單與 CSV 明細匯出</strong>：僅於您主動點擊匯出時在裝置本機產生暫存檔，並透過 iOS 系統分享面板（Share Sheet）由您自主決定保存位置或分享對象。</li>
+          <li><strong>本機 JSON 備份與還原</strong>：匯出之備份檔由您自行保管；匯入還原時僅在裝置本機解析驗證格式與版本，不傳送至任何外部伺服器。</li>
+        </ul>
+
+        <h2>4. Apple Privacy Manifest 與不追蹤宣告</h2>
+        <p>依本 App 內嵌之 Apple Privacy Manifest（<code>PrivacyInfo.xcprivacy</code>）：</p>
+        <ul>
+          <li>跨 App 追蹤（<code>NSPrivacyTracking</code>）：<strong>否（false）</strong></li>
+          <li>資料收集清單（<code>NSPrivacyCollectedDataTypes</code>）：<strong>無（空清單）</strong></li>
+          <li>不使用廣告識別碼（IDFA），不需觸發 App Tracking Transparency（ATT）授權彈窗</li>
+        </ul>
+
+        <h2>5. 資料保存、刪除與使用控制權</h2>
+        <ul>
+          <li><strong>雙重確認清除全部資料</strong>：您可隨時至 App「設定 → 清除全部本機資料」，經兩步驟確認後永久移除本機全部工作、規則版本、班表與對帳單。</li>
+          <li><strong>解除安裝</strong>：移除 ShiftPay 後，iOS 系統將依沙盒安全機制同步刪除所有本機資料。</li>
+          <li><strong>取消訂閱不刪資料</strong>：即使未來取消 Pro 訂閱或訂閱過期，您既有的所有本機歷史紀錄仍 100% 保留不被刪除。</li>
+        </ul>
+
+        <h2>6. 靜態支援網站說明</h2>
+        <p>
+          本公開網站為純靜態 HTML 頁面，無第三方廣告或訪客追蹤 Cookie。若由 GitHub Pages 託管，GitHub 伺服器可能基於安全與維運合規暫時記錄連線 IP，詳情請參閱 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub 隱私權聲明</a>。
+        </p>
+
+        <h2>7. 政策更新與開發者聯絡方式</h2>
+        <p>若本隱私權政策因功能更新或法規調整而修訂，將即時更新於本公開網頁並標註修訂日期。如有任何疑問或資料保護相關詢問，請聯繫：</p>
+        <p>
+          <strong>開發者兼資料管理負責人：</strong> LU TSE-HSIEN<br>
+          <strong>聯絡電子郵件：</strong> <a href="mailto:NickLu930705@gmail.com">NickLu930705@gmail.com</a>
+        </p>
+      </article>
+
+      <div class="doc-nav-card">
+        <div>
+          <h4>需要協助或查詢常見問題？</h4>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px;">查看算式透明化、調薪版本、備份還原與恢復購買指引。</p>
+        </div>
+        <a href="support.html" class="btn btn-primary btn-sm">前往技術支援專頁</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div>
+        <p>© 2026 LU TSE-HSIEN. All rights reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 4px; color: var(--text-muted);">
+          使用條款：<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Apple 標準 EULA</a>
+        </p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="../index.html">作品集首頁</a></li>
+        <li><a href="index.html">ShiftPay 介紹</a></li>
+        <li><a href="privacy.html">隱私政策</a></li>
+        <li><a href="support.html">技術支援</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
